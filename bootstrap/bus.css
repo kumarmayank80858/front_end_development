@@ -1,0 +1,39 @@
+a.navbar-brand {
+    font-size: 28px;
+    text-decoration-style: solid;
+    
+}
+.container-fluid{
+    background-size: cover;
+    background-color: darkgrey;
+    height: 1000rem;
+}
+ 
+[class*="col-sm-4 col-lg-4"] {
+    
+    background-color: #b3ffff;
+        height:4.2rem;
+    border: 2px solid rgba(0, 0, 0, 0.3);
+    text-align: center;
+    padding: 15px;  
+    font: 20px;
+}
+
+[class*="col-sm-4 col-bg-4"] {
+    background-size: cover;
+    backface-visibility: visible;
+        background-color: #f2f2f2;
+    border: 2px solid rgba(0, 0, 0, 0.3);
+    height:20rem;
+}
+/*.card-img-top{
+    width:13rem;
+    height:13rem;
+    padding:10px;
+}
+.card {
+    height: 13rem;
+    width:13rem; 
+    margin:auto;
+    margin-top: 15px;
+}*/

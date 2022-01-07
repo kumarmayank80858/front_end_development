@@ -1,0 +1,51 @@
+/*[class*="col-"] {
+    
+    background-color: #00C3AA;
+        height:4.2rem;
+    border: 2px solid rgba(0, 0, 0, 0.3);
+}*/
+
+body.signin-body {
+    background-image: url(GITA-IMAGE/gita.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.container.signin-container {
+    margin-top: 2%;
+    margin-bottom: 2%;
+    max-width: 700px;
+    max-height: 500px;
+}
+
+.card.signin-card {
+    padding :0px;
+    background-color: #f4f4f4;
+    box-shadow: 2px 2px 5px rgba(0 ,0 ,0 , .5);
+    -webkit-box-shadow: 2px 2px 5px rgba(0, 0, 0,0.5);
+    -moz-box-shadow: 2px 2px 5px rgba(0, 0, 0,0.5);
+
+
+}
+img.signin-img {
+    padding:0 0rem 1rem;
+    margin: auto;
+    display:block;
+    width:80%; 
+    
+}
+form.signin-form {
+    max-width: 200px;
+    padding:0rem 0rem 2rem;
+}
+button.btn {
+    display: block;
+    margin: auto;
+    color:snow;
+    background-color:cornflowerblue;
+    border-color: blueviolet;
+}
+form.form-check-label {
+    padding: 0rem 2rem 0rem; 
+    margin-right: auto;
+}

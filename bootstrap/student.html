@@ -1,0 +1,514 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Student</title>
+  <link rel="stylesheet" href="main.css">
+</head>
+
+<script src="jquery.min.js"></script>
+<!-- <script src="https:www.gstatic.com/firebasejs/6.2.4/firebase.js"></script> -->
+<script src="https://www.gstatic.com/firebasejs/7.14.2/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/7.14.2/firebase-firestore.js"></script>
+ <script type="text/javascript" src="database.js"></script>
+<script>
+           
+           
+        const firebaseConfig = {
+      apiKey: "AIzaSyD3EEE1wSYuDEgXbvQLurk6NyEJ8aRvgrM",
+      authDomain: "flash-chat-b8188.firebaseapp.com",
+      databaseURL: "https://flash-chat-b8188.firebaseio.com",
+      projectId: "flash-chat-b8188",
+      storageBucket: "flash-chat-b8188.appspot.com",
+      messagingSenderId: "681840534135",
+      appId: "1:681840534135:web:82fc843905202e2eeedc72",
+      measurementId: "G-1TJZ7K9Y22"
+    };
+    
+    firebase.initializeApp(firebaseConfig);
+
+
+      </script>
+
+<body>
+  <table cellspacing="10">
+    <tr>
+        <div>
+  <td><img
+           src="gita-logo.jpg"  class="gita-fluid"></td>
+  </div>
+        <td><em><h1> Gandhi Institute for Technological</h1> <h1>Advancement,Bhubaneswar.</h1></em></td>
+      </tr>
+</table> 
+
+
+
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+<a class="navbar-brand" href="#">GITA</a>
+<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+<span class="navbar-toggler-icon"></span>
+</button>
+
+<div class="collapse navbar-collapse" id="navbarSupportedContent">
+<ul class="navbar-nav mr-auto">
+  <li class="nav-item active">
+    <a class="nav-link" href="/student">STUDENT <span class="sr-only">(current)</span></a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" href="/bus">BUS</a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" href="/visitor">VISITORS</a>
+  </li>
+  <li class="nav-item dropdown">
+    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+      
+    </a>
+    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+      <a class="dropdown-item" href="/user/RECORD-LIST">RECORD-LIST</a>
+      <a class="dropdown-item" href="/user/logout">LOGOUT</a>
+      
+     
+    </div>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true"></a>
+  </li>
+</ul>
+<form class="form-inline my-2 my-lg-0">
+  <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+  <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+</form>
+</div> 
+</nav>
+
+  
+   <div class="container-fluid">
+          
+<div class="row">
+
+    <div class="col-lg-12">
+    <div class="row">
+        
+        <div class="col-sm-4 col-lg-4"><strong>IMAGE & NAME</strong></div>
+        
+        
+         <div class="col-sm-4 col-lg-4"><strong>DATE & TIME </strong></div>
+         <div class="col-sm-4 col-lg-4"><strong>YEAR & PURPOSE OF VISIT OR CONTACT.NO</strong></div>
+        </div>
+    </div> 
+       </div>
+
+  
+
+
+<div class="row">
+
+    <div class="col-sm-4 col-bg-4">
+   <div class="card">
+<img class="card-img-top" src="" alt="image">
+        </div>
+<div id="card-block">
+<strong class="card-text">Name:-</strong>
+</div>
+
+</div>
+    
+    <div class="col-sm-4 col-bg-4">
+    <div class="card-block">
+<strong class="card-text">Date:-</strong>
+</div>
+        <div class="card-block">
+<strong class="card-text">Entry-time:-</strong>
+</div>
+<div class="card-block">
+                <strong class="card-text">Exit-Time:-</strong>
+                </div>
+    </div>
+    <div class="col-sm-4 col-bg-4">
+    <div class="card-block">
+<strong class="card-text">Year:-</strong>
+</div>
+        <div class="card-block">
+<strong class="card-text">Purpose:-</strong>
+</div>
+<div class="card-block">
+        <strong class="card-text">Vehicle no:-</strong>
+        </div>
+        <div class="card-block">
+<strong class="card-text">Contact.no:-</strong>
+</div>
+</div>
+</div>
+  
+  <div class="row">
+
+    <div class="col-sm-4 col-bg-4">
+   <div class="card">
+<img class="card-img-top" src="" alt="image">
+        </div>
+<div class="card-block">
+<strong class="card-text">Name:-</strong>
+</div>
+
+</div>
+    
+    <div class="col-sm-4 col-bg-4">
+    <div class="card-block">
+<strong class="card-text">Date:-</strong>
+</div>
+        <div class="card-block">
+<strong class="card-text">Entry-time:-</strong>
+</div>
+        <div class="card-block">
+<strong class="card-text">Exit-Time:-</strong>
+</div>
+    </div>
+    <div class="col-sm-4 col-bg-4">
+    <div class="card-block">
+<strong class="card-text">Year:-</strong>
+</div>
+
+<div class="card-block">
+        <strong class="card-text">Vehicle no:-</strong>
+        </div>
+
+        <div class="card-block">
+<strong class="card-text">Purpose:-</strong>
+</div>
+        <div class="card-block">
+<strong class="card-text">Contact.no:-</strong>
+</div>
+</div>
+</div>
+       
+  <div class="row">
+
+    <div class="col-sm-4 col-bg-4">
+   <div class="card">
+<img class="card-img-top" src="" alt="image">
+        </div>
+<div class="card-block">
+<strong class="card-text">Name:-</strong>
+</div>
+
+</div>
+    
+    <div class="col-sm-4 col-bg-4">
+    <div class="card-block">
+<strong class="card-text">Date:-</strong>
+</div>
+        <div class="card-block">
+<strong class="card-text">Entry-time:-</strong>
+</div>
+        <div class="card-block">
+<strong class="card-text">Exit-Time:-</strong>
+</div>
+    </div>
+    <div class="col-sm-4 col-bg-4">
+    <div class="card-block">
+<strong class="card-text">Year:-</strong>
+</div>
+        <div class="card-block">
+<strong class="card-text">Purpose:-</strong>
+</div>
+        <div class="card-block">
+<strong class="card-text">Contact.no:-</strong>
+</div>
+</div>
+</div>
+       
+  <div class="row">
+
+    <div class="col-sm-4 col-bg-4">
+   <div class="card">
+<img class="card-img-top" src="" alt="image">
+        </div>
+<div class="card-block">
+<strong class="card-text">Name:-</strong>
+</div>
+
+</div>
+    
+    <div class="col-sm-4 col-bg-4">
+    <div class="card-block">
+<strong class="card-text">Date:-</strong>
+</div>
+        <div class="card-block">
+<strong class="card-text">Entry-time:-</strong>
+</div>
+        <div class="card-block">
+<strong class="card-text">Exit-Time:-</strong>
+</div>
+    </div>
+    <div class="col-sm-4 col-bg-4">
+    <div class="card-block">
+<strong class="card-text">Year:-</strong>
+</div>
+        <div class="card-block">
+<strong class="card-text">Purpose:-</strong>
+</div>
+        <div class="card-block">
+<strong class="card-text">Contact.no:-</strong>
+</div>
+</div>
+</div>
+       <div class="row">
+
+    <div class="col-sm-4 col-bg-4">
+   <div class="card">
+<img class="card-img-top" src="" alt="image">
+        </div>
+<div class="card-block">
+<strong class="card-text">Name:-</strong>
+</div>
+
+</div>
+    
+    <div class="col-sm-4 col-bg-4">
+    <div class="card-block">
+<strong class="card-text">Date:-</strong>
+</div>
+        <div class="card-block">
+<strong class="card-text">Entry-time:-</strong>
+</div>
+        <div class="card-block">
+<strong class="card-text">Exit-Time:-</strong>
+</div>
+    </div>
+    <div class="col-sm-4 col-bg-4">
+    <div class="card-block">
+<strong class="card-text">Year:-</strong>
+</div>
+        <div class="card-block">
+<strong class="card-text">Purpose:-</strong>
+</div>
+        <div class="card-block">
+<strong class="card-text">Contact.no:-</strong>
+</div>
+</div>
+</div>
+       
+<div class="row">
+
+    <div class="col-sm-4 col-bg-4">
+   <div class="card">
+<img class="card-img-top" src="" alt="image">
+        </div>
+<div class="card-block">
+<strong class="card-text">Name:-</strong>
+</div>
+
+</div>
+    
+    <div class="col-sm-4 col-bg-4">
+    <div class="card-block">
+<strong class="card-text">Date:-</strong>
+</div>
+        <div class="card-block">
+<strong class="card-text">Entry-time:-</strong>
+</div>
+        <div class="card-block">
+<strong class="card-text">Exit-Time:-</strong>
+</div>
+    </div>
+    <div class="col-sm-4 col-bg-4">
+    <div class="card-block">
+<strong class="card-text">Year:-</strong>
+</div>
+        <div class="card-block">
+<strong class="card-text">Purpose:-</strong>
+</div>
+        <div class="card-block">
+<strong class="card-text">Contact.no:-</strong>
+</div>
+</div>
+</div>   
+       
+  <div class="row">
+
+    <div class="col-sm-4 col-bg-4">
+   <div class="card">
+<img class="card-img-top" src="" alt="image">
+        </div>
+<div class="card-block">
+<strong class="card-text">Name:-</strong>
+</div>
+
+</div>
+    
+    <div class="col-sm-4 col-bg-4">
+    <div class="card-block">
+<strong class="card-text">Date:-</strong>
+</div>
+        <div class="card-block">
+<strong class="card-text">Entry-time:-</strong>
+</div>
+        <div class="card-block">
+<strong class="card-text">Exit-Time:-</strong>
+</div>
+    </div>
+    <div class="col-sm-4 col-bg-4">
+    <div class="card-block">
+<strong class="card-text">Year:-</strong>
+</div>
+        <div class="card-block">
+<strong class="card-text">Purpose:-</strong>
+</div>
+        <div class="card-block">
+<strong class="card-text">Contact.no:-</strong>
+</div>
+</div>
+</div>
+      <div class="row">
+
+    <div class="col-sm-4 col-bg-4">
+   <div class="card">
+<img class="card-img-top" src="" alt="image">
+        </div>
+<div class="card-block">
+<strong class="card-text">Name:-</strong>
+</div>
+
+</div>
+    
+    <div class="col-sm-4 col-bg-4">
+    <div class="card-block">
+<strong class="card-text">Date:-</strong>
+</div>
+        <div class="card-block">
+<strong class="card-text">Entry-time:-</strong>
+</div>
+        <div class="card-block">
+<strong class="card-text">Exit-Time:-</strong>
+</div>
+    </div>
+    <div class="col-sm-4 col-bg-4">
+    <div class="card-block">
+<strong class="card-text">Year:-</strong>
+</div>
+        <div class="card-block">
+<strong class="card-text">Purpose:-</strong>
+</div>
+        <div class="card-block">
+<strong class="card-text">Contact.no:-</strong>
+</div>
+</div>
+</div>
+       
+  <div class="row">
+
+    <div class="col-sm-4 col-bg-4">
+   <div class="card">
+<img class="card-img-top" src="" alt="image">
+        </div>
+<div class="card-block">
+<strong class="card-text">Name:-</strong>
+</div>
+
+</div>
+    
+    <div class="col-sm-4 col-bg-4">
+    <div class="card-block">
+<strong class="card-text">Date:-</strong>
+</div>
+        <div class="card-block">
+<strong class="card-text">Entry-time:-</strong>
+</div>
+        <div class="card-block">
+<strong class="card-text">Exit-Time:-</strong>
+</div>
+    </div>
+    <div class="col-sm-4 col-bg-4">
+    <div class="card-block">
+<strong class="card-text">Year:-</strong>
+</div>
+        <div class="card-block">
+<strong class="card-text">Purpose:-</strong>
+</div>
+        <div class="card-block">
+<strong class="card-text">Contact.no:-</strong>
+</div>
+</div>
+</div>
+  
+<div class="row">
+
+    <div class="col-sm-4 col-bg-4">
+   <div class="card">
+<img class="card-img-top" src="" alt="image">
+        </div>
+<div class="card-block">
+<strong class="card-text">Name:-</strong>
+</div>
+
+</div>
+    
+    <div class="col-sm-4 col-bg-4">
+    <div class="card-block">
+<strong class="card-text">Date:-</strong>
+</div>
+        <div class="card-block">
+<strong class="card-text">Entry-time:-</strong>
+</div>
+        <div class="card-block">
+<strong class="card-text">Exit-Time:-</strong>
+</div>
+    </div>
+    <div class="col-sm-4 col-bg-4">
+    <div class="card-block">
+<strong class="card-text">Year:-</strong>
+</div>
+        <div class="card-block">
+<strong class="card-text">Purpose:-</strong>
+</div>
+        <div class="card-block">
+<strong class="card-text">Contact.no:-</strong>
+</div>
+</div>
+</div>  
+  
+  <div class="row">
+
+    <div class="col-sm-4 col-bg-4">
+   <div class="card">
+<img class="card-img-top" src="" alt="image">
+        </div>
+<div class="card-block">
+<strong class="card-text">Name:-</strong>
+</div>
+
+</div>
+    
+    <div class="col-sm-4 col-bg-4">
+    <div class="card-block">
+<strong class="card-text">Date:-</strong>
+</div>
+        <div class="card-block">
+<strong class="card-text">Entry-time:-</strong>
+</div>
+        <div class="card-block">
+<strong class="card-text">Exit-Time:-</strong>
+</div>
+    </div>
+    <div class="col-sm-4 col-bg-4">
+    <div class="card-block">
+<strong class="card-text">Year:-</strong>
+</div>
+        <div class="card-block">
+<strong class="card-text">Purpose:-</strong>
+</div>
+        <div class="card-block">
+<strong class="card-text">Contact.no:-</strong>
+</div>
+</div>
+</div>
+  
+  </div>
+ 
+
+</body>
+
+</html>
